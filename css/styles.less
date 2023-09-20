@@ -3,6 +3,12 @@
 @second-color: rgb(220, 15, 15);
 @third-color: rgb(242, 162, 9);
 
+.white-box() {
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 3px 13.8px 1.2px rgba(152, 152, 152, 0.2);
+    padding: 16px 0 15px 0;
+}
+
 /*=============== FONTS ===============*/
 @font-face {
     font-family: MullerRegular;
@@ -57,6 +63,10 @@ li {
     font-size: 16px;
     font-family: MullerExtraBold, sans-serif;
     color: @third-color;
+
+    &:hover {
+        background-color: rgb(197, 133, 12);
+    }
 }
 
 .base-input {
@@ -72,9 +82,7 @@ li {
 
 /*=============== HEADER & NAV ===============*/
 .header {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 3px 13.8px 1.2px rgba(152, 152, 152, 0.2);
-    padding: 16px 0 15px 0;
+    .white-box();
     &__container {
         display: flex;
         align-items: center;
@@ -176,6 +184,12 @@ li {
         box-shadow: 0 3px 13.8px 1.2px rgba(152, 152, 152, 0.2);
         text-align: center;
         padding: 15px 20px;
+        &:hover {
+            .product__image {
+                transform: scale(1.1);
+            }
+        }
+
         &__image {
             height: 180px;
             display: flex;
@@ -254,9 +268,7 @@ li {
 
 /*=============== FOOTER ===============*/
 .footer {
-    background-color: rgb(255, 255, 255);
-    box-shadow: 0 0 13.8px 1.2px rgba(152, 152, 152, 0.2);
-    padding: 16px 0 15px 0;
+    .white-box();
     &__container {
         display: flex;
         align-items: center;
